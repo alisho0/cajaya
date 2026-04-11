@@ -11,9 +11,9 @@ import java.util.Optional;
 public interface ProductService {
     ProductResponse createProduct(CreateProductRequest request, Long businessId);
 
-    List<Product> getProducts(Long businessId);
+    List<ProductResponse> getProducts(Long businessId);
 
-    Product updateProduct(Long productId, UpdateProductRequest request);
+    ProductResponse updateProduct(UpdateProductRequest request, Long productId);
 
     Optional<Product> findByBarcode(String barcode, Long businessId);
 }
